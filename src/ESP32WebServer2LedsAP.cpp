@@ -120,12 +120,12 @@ void loop(){
             client.println(".buttongroen { background-color: #44CC44; border-radius:20px; border:4px solid #22AA22; color: #0000FF; width: 150px;padding: 16px;");
             client.println("text-decoration: none; font-size: 30px; cursor: pointer;}");
             client.println(".button2groen {background-color: #558855;}");
-            client.println(".buttonrood {	background-color:#EE0000;	border-radius:20px;	cursor:pointer;	font-size: 30px;color: #FFFF00;width: 150px;padding: 20px;	 }");
-            client.println(".button2rood {background-color: #771111;}</style></head>");
+            client.println(".buttonrood {	background-color:#CC4444;	border-radius:20px;	cursor:pointer;	font-size: 30px;color: #FFFF00;width: 150px;padding: 20px;	 }");
+            client.println(".button2rood {background-color: #885555;}</style></head>");
             
             // Web Page hoofding
             client.println("<body><h1>Thomas More</h1>");
-            client.println("<body><h1>ESP32 Web Server</h1>");
+            client.println("<body><h2>ESP32 Web Server</h2>");
             
             // Display actuele status, voor GPIO 15  
             client.println("<p>GPIO 15 - LED is " + output15GroenState + "</p>");
