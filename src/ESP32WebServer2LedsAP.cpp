@@ -3,9 +3,9 @@
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 
-// Vervang door je netwerkgegevens // TODO aanloggen met paswoord werkt nog niet
+// Vervang door je netwerkgegevens
 const char* ssid = "ESP32AP";  // vervang!!
-const char* password = "Paswoord123!";  // vervang!!
+const char* password = "12345678";  // vervang!!
 
 // Set web server port number op 80
 WiFiServer server(80);
@@ -45,9 +45,7 @@ void setup() {
   digitalWrite(output4Rood, LOW);
 
   // Verwijder password voor een open AP
-  // TODO aanloggen met paswoord werkt nog niet
-
-  WiFi.softAP(ssid);
+  WiFi.softAP(ssid, password);
   IPAddress myIP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
   Serial.println(myIP);
@@ -57,8 +55,8 @@ void setup() {
   Serial.println("Je kan connecteren met: ");
   Serial.print("ssid: ");
   Serial.println (ssid);
-  //Serial.print("password: ");
-  //Serial.println(password);
+  Serial.print("password: ");
+  Serial.println(password);
 
 
 
